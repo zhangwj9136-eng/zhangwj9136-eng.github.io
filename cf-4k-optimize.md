@@ -1,6 +1,6 @@
 # 【折腾笔记】告别晚高峰卡顿！Cloudflare 优选 IP 进阶与 4K 满速终极方案
 
-
+<img src="cover-4k.jpg" alt="晚高峰4K加速封面图" width="100%">
 
 很多朋友在通过 Cloudflare CDN（小黄云）“复活”被墙 VPS 后，都会遇到同一个痛点：**白天速度飞快，一到晚上 8 点～11 点半的晚高峰，YouTube 4K 就开始疯狂转圈。**
 

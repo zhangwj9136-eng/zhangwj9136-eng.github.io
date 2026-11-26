@@ -22,7 +22,7 @@
 
 ## 二、 现代主流协议（第一梯队：当前主力首选）
 
-这类协议针对现代网络审查机制进行了深度重构，是目前稳定性最高、最推荐在 `3x-ui` 面板中部署的方案[第一篇：3x-ui面板搭建](https://zhangwj9136-eng.github.io/3x-ui-setup.html)。
+这类协议针对现代网络审查机制进行了深度重构，是目前稳定性最高、最推荐在 `3x-ui` 面板中部署的方案。[第一篇：3x-ui面板搭建](https://zhangwj9136-eng.github.io/3x-ui-setup.html)
 
 ### 1. VLESS + Reality（当前公认最强伪装方案）
 * **所属生态**：Xray-core

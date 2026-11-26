@@ -126,5 +126,5 @@
 2. **普通国际线路（如 RackNerd、DMIT T1 等非优化线路）**
    * **首选组合**：`Hysteria 2`（主力抢速度） + `VLESS + XHTTP/TCP + Reality`（日常防封备用）。
    * **原因**：普通线路晚高峰跨国丢包严重，传统 TCP 协议速度会断崖式下跌，必须依靠 Hysteria 2 的 UDP 多倍发包机制强行拉满带宽。
-3. **万一 IP 不幸被封（急救方案）**[第二篇：VPS IP 被墙复活实战](./vps-rescue.html)）
+3. **万一 IP 不幸被封（急救方案）**[第二篇：VPS IP 被墙复活实战](https://zhangwj9136-eng.github.io/vps-rescue.html)）
    * **首选组合**：在 Cloudflare 开启小黄云代理，服务器切换为 `VLESS + WS/HTTPUpgrade + TLS`（或 `VMess + WS + TLS`），即可零成本复活节点继续使用。

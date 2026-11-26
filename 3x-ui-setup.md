@@ -19,7 +19,7 @@
 3. **添加 A 记录解析：**
    * 进入 Cloudflare 域名控制台 ➔ 左侧 **DNS -> 记录** ➔ 点击 **添加记录**。
    * **类型：** `A`
-   * **名称：** 填一个二级前缀（例如 `node` 或 `vps`，完整域名即为 `://example.com`）
+   * **名称：** 填一个二级前缀（例如 `node` 或 `vps`，完整域名即为 `:example.com`）
    * **IPv4 地址：** 填入你刚买的 VPS 公网 IP。
    * **代理状态（关键！）：** **务必先点灭小黄云，保持灰色“DNS 仅限 (DNS Only)”状态**（只有让域名直接指向源站 IP，接下来的安装脚本才能顺利验证并签发 SSL 证书）。
 
@@ -47,7 +47,7 @@ bash <(curl -Ls https://githubusercontent.com)
 3. **设置面板根路径（Web Base Path）：** 建议设置一个随机字母路径（例如 `/myxui`），防止面板暴露在公网被恶意扫描。
 4. **申请 SSL 证书（高能省事一步）：** 当脚本询问是否配置 SSL 证书时，输入 `y` 并填入你第一步解析好的完整域名（例如 `://example.com`），脚本会自动调用 Acme 帮你申请好免费证书并自动配置到面板中！
 
-安装完成后，终端会直接给出你的专属安全登录地址：**`https://://example.com:2083/myxui`**，无需明文 IP 跳转，直接在浏览器打开即可安全登录！
+安装完成后，终端会直接给出你的专属安全登录地址：**`https://:xxx.example.com:2083/myxui`**，无需明文 IP 跳转，直接在浏览器打开即可安全登录！
 
 ---
 
@@ -73,8 +73,8 @@ bash <(curl -Ls https://githubusercontent.com)
   3. **流控 (Flow)：** 在客户配置下拉框中选中 **`xtls-rprx-vision`**
   4. **传输 (Network)：** 保持默认 `tcp` (raw)
   5. **安全 (Security)：** 选中 **`reality`**
-     * **Dest (目标网站)：** 填 `://apple.com`（或 `://microsoft.com`）
-     * **ServerNames (SNI)：** 填 `://apple.com`
+     * **Dest (目标网站)：** 填 `:www.apple.com`（或 `:www.microsoft.com`）
+     * **ServerNames (SNI)：** 填 `:www.apple.com`
      * 点击下方的 **Get New Cert** 按钮自动生成私钥与公钥对。
 
 ---
@@ -86,7 +86,7 @@ bash <(curl -Ls https://githubusercontent.com)
   2. **协议：** 选 `hysteria2`（或 `hy2`）➔ **端口：** 填一个高位 UDP 端口，如 `34567`（注意服务器防火墙需放行该端口的 UDP 流量）
   3. **传输 (Network)：** 保持默认 `udp`
   4. **安全 (Security)：** 选中 **`tls`**
-     * **域名 (SNI)：** 填入你的解析域名（如 `://example.com`）
+     * **域名 (SNI)：** 填入你的解析域名（如 `:example.com`）
      * **证书：** 直接点击下方的 **“设置面板证书”** 按钮，一键复用安装时自动申请好的域名证书。
 
 ---
@@ -97,10 +97,10 @@ bash <(curl -Ls https://githubusercontent.com)
   1. **备注：** `Trojan-WS-TLS`
   2. **协议：** 选 `trojan` ➔ **端口：** 填 **`8443`**（选择 Cloudflare 支持的 HTTPS 端口，为日后无缝切换小黄云留好后路）
   3. **传输 (Network)：** 选 **`ws`**
-     * **主机 (Host)：** 填入你的解析域名（如 `://example.com`）
+     * **主机 (Host)：** 填入你的解析域名（如 `:example.com`）
      * **路径 (Path)：** 填 `/trojan`
   4. **安全 (Security)：** 选中 **`tls`**
-     * **域名 (SNI)：** 填入你的解析域名（如 `://example.com`）
+     * **域名 (SNI)：** 填入你的解析域名（如 `:example.com`）
      * **证书：** 点击 **“设置面板证书”** 按钮一键复用证书。
 
 ---
